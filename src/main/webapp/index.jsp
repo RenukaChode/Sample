@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>Electronic Gadgets</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -8,41 +9,17 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-  <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="Details.css" rel="stylesheet" type="text/css"/>
+  
+  <%@include file="Header.jsp" %>
+  <%@include file="Footer.jsp" %>
   
  <style>.carousel-inner > .item > img { width:100%; height:350px; } </style>
  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
 </head>
+<br>
 <body>
-
-	<!-- starting header navigation bar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		
-		<div class="container">
-
-			<a href="#" class="navbar-brand"><i>Electronics</i></a>
-			<div class="col-sm-7 col-md-7">
-				<form class="navbar-form" role="search">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search"
-							name="srch-term" id="srch-term">
-						<div class="input-group-btn">
-							<button class="btn btn-default" type="submit">
-								<i class="glyphicon glyphicon-search"></i>
-							</button>
-						</div>
-					</div>
-				</form>
-			</div>
-			<div>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Sign In</a></li>
-					<li><a href="#">Sign Out</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
 	<div class="container">
 	<div class="row">
 	<div class="col-md-12">
@@ -57,15 +34,15 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="./images/9.jpg" alt=" " />
+				<img src="./resources/images/9.jpg" alt=" " />
 			</div>
 
 			<div class="item">
-				<img src="./images/10.jpg" alt=" ">
+				<img src="./resources/images/10.jpg" alt=" ">
 			</div>
 
 			<div class="item">
-				<img src="./images/11.jpg" alt=" ">
+				<img src="./resources/images/11.jpg" alt=" ">
 			</div>
 		</div>
 
@@ -85,23 +62,153 @@
 <br>
 <table class="table table-bordered table-striped">
 <tr>
-<td><a href="#"><img src="./images/4.jpg" width="150" height="200"></a></td>
-<td><a href="#"><img src="./images/5.jpg" height="200"></a></td>
-<td><a href="#"><img src="./images/6.jpg" height="200"></a></td>
-<td><a href="#"><img src="./images/7.jpg" height="200"></a></td>
-<td><a href="#"><img src="./images/8.jpg" height="200"></a></td>
+<td><a href="Productdetails.jsp"><img src="./resources/images/12_.jpg" width="200" height="200"></a></td>
+<td><a href="#"><img src="./resources/images/13_.jpg" height="200"></a></td>
+<td><a href="#"><img src="./resources/images/14_.jpg" width="200" height="200"></a></td>
+<td><a href="#"><img src="./resources/images/15.jpg" height="200"></a></td>
+<td><a href="#"><img src="./resources/images/16.jpg" height="200"></a></td>
 </tr>
 </table>
-		<div class="navbar navbar-inverse navbar-fixed-bottom">
-		<div class="container">
-		 <footer>
-        <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-        <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
-        <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
-        <a href="#"><i class="fa fa-skype fa-2x"></i></a>
-       </footer>
-       </div>
-       </div>
+		
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+					 	
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form id="loginform" class="form-horizontal" role="form">
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">                                        
+                                    </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                                    </div>
+                                    
+
+                                
+                            <div class="input-group">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                        </label>
+                                      </div>
+                                    </div>
+
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                                      <a id="cancel" href="index.jsp" class="btn btn-default">Cancel</a>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account! 
+                                        <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                            Sign Up Here
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+        <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+                                
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                                    
+                                
+                                  
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="icode" class="col-md-3 control-label">City</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="icode" placeholder="Enter Your City Name">
+                                    </div>
+                                </div>
+			                 
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i>Sign Up</button>
+                                        <span style="margin-left:8px;">or</span> 
+                                       
+                                        <a href="index.jsp" class="btn btn-info" role="button">Cancel</a>
+                                       
+                                    </div>
+                                </div>
+                                
+                                <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+                                    
+                                    <div class="col-md-offset-3 col-md-9">
+                                        
+                                    </div>                                           
+                                        
+                                </div>
+                                
+                                
+                                
+                            </form>
+                         </div>
+                    </div>
+ </div> 
+ </div>
+    
 </body>
 </html>
