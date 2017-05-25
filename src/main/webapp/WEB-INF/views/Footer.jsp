@@ -9,12 +9,13 @@
 <body>
 <div class="navbar navbar-inverse navbar-fixed-bottom">
 		<div class="container">
-		 <footer>
+		<footer>
         <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
         <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
         <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
         <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
         <a href="#"><i class="fa fa-skype fa-2x"></i></a>
+       
        </footer>
        </div>
        </div>

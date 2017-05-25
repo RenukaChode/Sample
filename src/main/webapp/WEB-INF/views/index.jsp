@@ -1,6 +1,8 @@
+
 <html>
 <head>
 <title>Electronic Gadgets</title>
+
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -10,7 +12,8 @@
 
 <!-- Latest compiled JavaScript -->
   <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="Details.css" rel="stylesheet" type="text/css"/>
+  
+  <link href="./resources/css/Details.css" rel="stylesheet" type="text/css"/>
   
   <%@include file="Header.jsp" %>
   <%@include file="Footer.jsp" %>
@@ -62,7 +65,7 @@
 <br>
 <table class="table table-bordered table-striped">
 <tr>
-<td><a href="Productdetails.jsp"><img src="./resources/images/12_.jpg" width="200" height="200"></a></td>
+<td><a href="productdetails"><img src="./resources/images/12_.jpg" width="200" height="200"></a></td>
 <td><a href="#"><img src="./resources/images/13_.jpg" height="200"></a></td>
 <td><a href="#"><img src="./resources/images/14_.jpg" width="200" height="200"></a></td>
 <td><a href="#"><img src="./resources/images/15.jpg" height="200"></a></td>

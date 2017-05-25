@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Electronic Gadgets</title>
+  <title>Electronic Gadgets</title>
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,9 +16,10 @@
 
 <!-- Latest compiled JavaScript -->
   <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="Details.css" rel="stylesheet" type="text/css"/>
+  <link href="./resources/css/Details.css" rel="stylesheet" type="text/css"/>
   
   <%@include file="Header.jsp" %>
+  
   <%@include file="Footer.jsp" %>
   
  <style>.carousel-inner > .item > img { width:100%; height:350px; } </style>
@@ -98,8 +100,7 @@
 					<div class="tab-pane fade" id="service-two">
 						
 						<section class="container">
-								
-						</section>
+								</section>
 						
 					</div>
 					<div class="tab-pane fade" id="service-three">
@@ -109,6 +110,7 @@
 				<hr>
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 </html>
